@@ -1,7 +1,7 @@
 let countries = ["Denmark", "Marocco", "Sweden", "Norway", "China", "Peru"]
 let countries2 = ["Germany", "USA", "Norway", "Brazil", "Peru", "China", "Denmark"]
 //Opgave, udskriv alle navne på lande i contries i konsolen. Brug forEach loops
-
+/* 
 for ( let i = 1; i < 11; i++){
     console.log(i);
 }
@@ -35,7 +35,7 @@ for(let i= 0; i < countries.length; i++) {
 
 for(let i in countries){
     console.log(countries[i]);
-}
+} */
 
 /* countries.forEach(function(d, i, a){
     console.log(d, i, a);
@@ -50,7 +50,8 @@ countries.forEach(function(country){
 // Hvis ikke vi finder landet skal der stå "landet" blev ikke foundet en gang 
 
 
-
+let countries23 = ["Denmark", "Marocco", "Sweden", "Norway", "China", "Peru"]
+let countries1 = ["Germany", "USA", "Norway", "Brazil", "Peru", "China", "Denmark"]
 function searchCountry(array, country){
     let countryFound = false;
     for(let i in array){
@@ -62,9 +63,23 @@ function searchCountry(array, country){
     if(!countryFound) {console.log(country + " not found")}
 }
 
-searchCountry(countries, "Russia")
+/* searchCountry(countries, "Russia")
 searchCountry(countries, "China")
 
 for(let i=0; i<countries2.length; i++){
     searchCountry(countries, countries2[i]);
+} */
+
+function searchCountryTh(array, country){
+    for(let i =0; i<array.length;i++){
+        if(array[i] === country){
+            console.log(country + " was found");
+        } else{
+            console.log("not on this index, try again");
+        }
+    }
+}
+
+for( let country of countries){
+    console.log(country);
 }
