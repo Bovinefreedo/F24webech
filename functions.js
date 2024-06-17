@@ -2,8 +2,8 @@
 
 //Hvad er et statement
 
-function addTwo(number){
-    return number+2;
+function addTwo(int){
+    return int+2;
 }
 
 let number = 0;
