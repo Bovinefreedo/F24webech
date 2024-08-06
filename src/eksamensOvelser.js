@@ -252,7 +252,7 @@ function invertArray(array){
     return newArray
 }
 
-console.log(invertArray(countries));
+//console.log(invertArray(countries));
 
 /* 17. (5pt) Skriv en funktion, som tager et array og en værdi mellem 0-2 (begge inkl) som
 parametre. Hvis der gives 0 med skal det første element skrives ud til konsollen, hvis
@@ -268,10 +268,10 @@ function printSomething(number, array){
     else {console.log("please choose a number between 0 and 2")}
 }
 
-printSomething(1, countries);
-printSomething(0, countries);
-printSomething(2, countries);
-printSomething("Denmark", countries)
+//printSomething(1, countries);
+//printSomething(0, countries);
+//printSomething(2, countries);
+//printSomething("Denmark", countries)
 
 
 /* 18. (5pt) Skriv et while-loop, som skriver 6-tabellen fra 1-60 ud i konsollen
