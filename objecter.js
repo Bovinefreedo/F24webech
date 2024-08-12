@@ -84,7 +84,7 @@ function dogsNamesAge(input){
     }
 }
 
-dogsNamesAge(input)
+//dogsNamesAge(input)
 
 ///////////////////////////////////////////////////////////
 //Større opgave////////////////////////////////////////////
@@ -107,3 +107,82 @@ dogsNamesAge(input)
 
 ///////////////////////////////////
 //HUSK ALTID {} EFTER IF(){}, for(){}, fuction name(){}
+
+// IF
+
+// IF ELSE
+
+// FUNCTION FIND i et array
+
+let countries = ["Denmark", "Marocco", "Sweden", "Norway", "China", "Peru"]
+let countries2 = ["Germany", "USA", "Norway", "Brazil", "Peru", "China", "Denmark"]
+
+// skriv en function om et land er i et array
+
+/* function findCountry2(country,array){
+    array.forEach((c)=>{
+        console.log(c,country, c===country)
+        if(c === country){
+            return country;
+        }
+    })
+    return country + " is not in the array";
+} */
+
+//findCountry("Denmark",countries2);
+//findCountry("USA",countries2);
+
+//Mit country er en string og mit array er et array af strings
+function findCountry (country, array){
+    let countryFound = false
+    array.forEach(function (c){
+        if (c === country) {
+            console.log(country + " is in the array")
+            countryFound = true;
+        }
+    })
+    if(!countryFound){console.log(country +" not here")} 
+}
+
+//findCountry("Norway", countries);
+//findCountry("Russia", countries);
+
+/* let names = ["Hans", "Peter", "Henrik", "Jens", "Lars", "Ole","Anders"];
+
+let found = false;
+
+
+for(let i = 0; i<names.length; i++){
+    if (names[i]=== "Bent"){
+        console.log("found name: " + names[i]);
+        found = true;
+    }
+}
+if(!found){console.log("Bent is not in the array")};
+ */
+//findCountry("Henrik", countries);
+//console.log(names)
+//names.sort()
+//console.log(names)
+
+
+
+function displayData(input){
+    console.log("starting new list///////")
+    for(let i=0; i<input.countryData.length; i++){
+        console.log(input.countryData[i][0]);
+    }
+}
+
+/* displayData(input);
+input.countryData.sort(function(a,b){return a[0]-b[0]});
+displayData(input);
+
+foo.bar(9)
+foo(input).bar(9)
+array.sort()
+addTwo(2)
+
+function foo(anything){
+    return {bar:(a)=>{}}
+} */
