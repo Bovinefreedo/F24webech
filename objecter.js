@@ -9,7 +9,8 @@ let input = {
         ["Los Angeles", "USA"]
 
     ],
-    dogs: [{name:"Bob", age:1, breed:"old english sheepdog"},
+    dogs: [
+        {name:"Bob", age:1, breed:"old english sheepdog"},
         {name:"Lonex", age:1.5, breed:"american golden"},
         {name: "Bella", age:7, breed:"labrador"},
         {name: "Francies", age:12, breed: "poodle"},
@@ -186,3 +187,182 @@ addTwo(2)
 function foo(anything){
     return {bar:(a)=>{}}
 } */
+
+        
+
+function Cat(name,age,color,dog){
+
+    this.name= name;
+    this.age= age;
+    this.color= color;
+    this.dog = dog;
+        
+    this.meow= ()=>{
+        console.log("meow")
+        return this;
+    };
+
+    this.attack= ()=>{
+        console.log(" scratch scratch");
+        return this;
+    };
+    this.purr= ()=>{
+        console.log("purr purr");
+        return this;
+    };
+
+    this.giveDog = () =>{
+        return this.dog
+    }
+}
+        
+let myCat= new Cat("Lily",2,"white", new Dog("bonny", 18, "Gadekryds"));
+        
+//console.log(myCat);
+        
+//myCat.meow().attack().purr().purr().meow().attack()
+
+//console.log(myCat.name)
+
+/* 1.	(6pt) giv et bud på hvordan en constructor-function kunne se ud til flg object literal:
+ */
+const shape = {type: "square", width: 2, height: 2, colour: "#fff000"};
+
+
+function Shape(type,width,height,color){
+    this.type=type;
+    this.width=width;
+    this.height=height;
+    this.color=color;
+}
+
+
+let shape2 = new Shape("square", 2, 2, "#fff000");
+
+//console.log(shape);
+//console.log(shape2);
+//stuff.objects[3].age
+
+//6.	(6pt) Skriv et for-loop hvor som løber fra 0-9 og som skriver hvert tredje tal ud i konsollen
+
+for(let i=0; i<10; i=i+3){
+    //console.log(i);
+}
+
+//document.body.getElementsByClassName("Hilana").forEach()
+
+function Dog(name, age, breed){
+    let stamina = 100;
+    this.name = name;
+    this.age = age;
+    this.breed = breed;
+    this.bork = () =>{
+        if(stamina>0){
+            console.log('BorkBork');
+            stamina -= 20;
+        }
+        else {console.log("whimper")}
+        return this;
+    }
+    this.chaseTail= () => {
+        if(stamina>0){
+            console.log('PantPant');
+            stamina -= 30;
+        }
+        else {console.log("whimper")}
+        return this;
+    }
+    this.sleep= () =>{
+        stamina = 100;
+        console.log("zzz")
+        return this
+    }
+}
+
+//myCat.meow().attack().giveDog().chaseTail();
+
+//10.	(4pt) Skriv hovedet til en funktion som skal lede efter et element i et array. Kald derefter funktionen med de rette argumenter
+
+//function findElment(element,array){}
+//findElement(856, studentIDs);
+//findElement("apple",friuts);
+//findElement(true, hasBroughtCake);
+
+//let digit1 = encrypt(stuff.keys, 4)
+//let digit2 = encrypt(stuff.keys, 2)
+
+//stuff.people.forEach((a)=>{
+//    FileList.innerHTML += "<p>" + a.name +"<p>"
+//})
+
+function invertArray(array){
+    let newArray = [];
+    for(let i=array.length-1; i>=0 ; i--){
+        newArray.push(array[i]);
+    }
+    return newArray
+}
+
+console.log(countries2);
+//console.log(invertArray(countries2));
+
+//17. (5pt) Skriv en funktion, som tager et array og en værdi mellem 0-2 (begge inkl) som parametre. 
+//Hvis der gives 0 med skal det første element skrives ud til konsollen, 
+//hvis der gives 2 med skal det sidste element skrives ud til konsollen 
+//og hvis der giver 1 med skal både det første og det sidste element skrives ud til konsollen: 
+
+function betty(array,value){
+    if (value===0){
+        console.log(array[0])
+    }  
+    else if (value===2){
+        console.log(array[array.length-1])
+    }
+    else if (value === 1){
+        console.log(array[0], array[array.length-1])
+    }
+
+}
+
+let tom = [];
+//betty(countries2, 0);
+//betty(countries2, 1);
+//betty(countries2, 2);
+//betty(countries2, 3);
+
+//18.	(5pt) Skriv et while-loop, som skriver 6-tabellen fra 1-60 ud i konsollen
+
+/* let i=6
+while(i<61){
+    console.log(i);
+    i+=6
+}
+
+i=1
+while(i<=60){
+    if(i%6==0){
+        console.log(i)
+    }
+    i++;
+} */
+
+//19.	 (6pt) Skriv en constructor-function som repræsenterer en person. Man skal kunne give navn og alder med.
+//Lav så en række person-objekter ud fra flg. to arrays, hvor navn på index 0 i det ene svarer til alder på index 0 i det andet:
+function person (name,age) {
+    this.name= name;
+    this.age=age; 
+}
+
+let names2 = ["Hans", "Peter", "Henrik", "Jens", "Lars", "Ole"];
+let ages = [23, 34, 45, 56, 67, 78];
+
+personList = [];
+for(let i=0; i<names2.length; i++){
+    let newPerson = new person(names2[i],ages[i]);
+    personList.push(newPerson);
+}
+
+console.log(personList[2].name);
+
+
+    
